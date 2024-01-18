@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const dataList = document.getElementById("vehicle-list");
-    const userName = document.getElementById( "name-input" );
-    const userEmail = document.getElementById( "email-input" );
-    const userPhone = document.getElementById( "phone-number-input" );
+    const userName = document.getElementById( "name-input" ).value;
+    const userEmail = document.getElementById( "email-input" ).value;
+    const userPhone = document.getElementById( "phone-number-input" ).value;
 
     // Replace the URL with your JSON server URL
     
@@ -34,13 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     <option value="booked">Booked</option>
                     `;
 
+                    // Set the initial status
+                    item.status = "open";
+
                     selectStatus.addEventListener("change", function() {
                         // Update the status when the selection changes
                         item.status = this.value;
                     });
 
-                    // Set the initial status
-                    item.status = "open";
+                    
 
                     // Create a button element
                     const selectButton = document.createElement("button");
@@ -60,6 +62,28 @@ document.addEventListener("DOMContentLoaded", function () {
                         } else {
                             alert ( "Sorry, that vehicle has been booked already. Please try another option." )
                         }
+
+                        //POST the selected vehicle data to JSON Server
+                        const bookInfo = {
+                            id : item.codigo,
+                            brand : item.nome,
+                            status : item.status,
+                            customerName : userName,
+                            customerEmail : userEmail,
+                            customerPhone : userPhone
+                        }//RESUME WORK HERE!
+
+                        fetch ( "http://localhost:3000/selected_cars", {
+                            method : "POST",
+                            headers : {
+                                "Content-Type" : "application/json"
+                            },
+                            body : JSON.stringify ( bookInfo )
+                        })
+                        .then ( response => response.text() )
+                        .then ( data => console.log (data) )
+                        .catch ( error => console.error ( `Could not save data, ${error}` ) )
+
                     });
 
 
