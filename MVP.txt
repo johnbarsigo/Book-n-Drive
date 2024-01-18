@@ -1,0 +1,8 @@
+MVP (MINIMUM VIABLE PRODUCT) FOR PROPOSED CAR HIRE SYSTEM
+
+The proposed Minimum Viable Product (MVP) aims to streamline the car booking process, mitigate overbooking and inventory inaccuracies, and address environmental concerns.
+Leveraging a JSON Server and APIs for efficient data management and a user-friendly website for booking purposes, the MVP seeks to simplify the booking journey, ensuring a quick and straightforward process for users.
+By implementing inventory updates and reservation validations, the system aims to eliminate overbooking issues and provide accurate information on available vehicles. This is done by collecting and maintaining user data, vehicle data and booking data.
+Additionally, the MVP incorporates features promoting environmental sustainability, such as highlighting eco-friendly vehicle options. 
+This MVP sets the foundation for a more user-centric, reliable, and environmentally conscious car hire system.
+

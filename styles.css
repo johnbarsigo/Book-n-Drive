@@ -1,0 +1,56 @@
+button {
+    width: 431px;
+    height: 44px;
+    left: 845px;
+    top: 1257px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+ul {
+    width: 1296px;
+    height: 60.50px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 200;
+    word-wrap: break-word;
+}
+
+#quickLinks a {
+    color: white;
+    text-decoration: none;
+}
+
+.navBar a {
+    color: black;
+    text-decoration: none;
+}
+
+.navBar a :hover{
+    text-transform: capitalize;
+    color: rgb(1, 119, 173);
+}/* Not working */
+
+/* ul {
+    justify-content: left;
+} */
+
+li {
+    list-style: none;
+    line-height: 50px;
+    text-align: left;
+}
+
+li button {
+    width: 100px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(185, 185, 185);
+    border: none;
+    border-radius: 30px;
+    float: right;
+    margin-right: 200px;
+}

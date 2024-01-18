@@ -1,0 +1,3 @@
+In creating a modern solution to bypass issues in car hire systems, my approach involves the integration of a JSON Server and a user-friendly booking website.
+This streamlined system aims to simplify the booking process, eliminate overbooking & inventory inaccuracies and promote environmental sustainability.
+By leveraging efficient data management and on-time updates, this solution strives to deliver an improved user experience, build trust through reliable reservation fulfillment, and contribute to eco-friendly practices within the car rental industry.
