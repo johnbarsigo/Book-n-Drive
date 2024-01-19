@@ -6,3 +6,6 @@ https://trello.com/invite/b/TDinAwsR/ATTI47f3a93ad8e16c97f289b05aed34eb966E344C5
 
 GitHub Repo Link:
 https://github.com/johnbarsigo/Book-n-Drive.git
+
+tailwind terminal :
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch

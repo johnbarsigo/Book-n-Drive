@@ -1,3 +1,20 @@
 {
-  "selected_cars": []
+  "selected_cars": [
+    {
+      "id": "5",
+      "brand": "Asia Motors",
+      "status": "booked",
+      "customerName": "John",
+      "customerEmail": "carson@gmail.com",
+      "customerPhone": "07234567768"
+    },
+    {
+      "id": "6",
+      "brand": "Audi",
+      "vehicleStatus": "booked",
+      "customerName": "John",
+      "customerEmail": "bookndrive@gmail.com",
+      "customerPhone": "23456"
+    }
+  ]
 }

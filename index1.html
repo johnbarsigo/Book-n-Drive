@@ -3,10 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Book'n'Drive</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 <body>
+
+    <div id="navBar">
+
+        <h1>Book'n'Drive</h1>
+
+        <div id="navLinks">
+            <ul>
+                <li> <a href="#about-section">About</a> </li>
+                <li> <a href="#fleet-section">Our Fleet</a> </li>
+                <li> <a href="#booking-info">Booking</a> </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="hero-section-1">
+        <img id="intro-img" src="./images/CamaroLogo.png" alt="Image of white Car">
+    </div>
+
+    <div>
+        <p class="body-text">Our Specialty, seamless booking with fast delivery services at your convenience.</p>
+    </div>
+
+    <div id="book-section-div">
+
+        <div id="need-a-car">
+            <p class="bold-normal">Need a car?</p>
+            <br/>
+            <p>Contact Us through our customer care centre:
+                <br/> <br/>
+                Email: bookndrive@gmail.com
+                <br/>
+                Telephone: +254 712 123 123
+            </p>
+        </div>
+
+        <div id="book-a-car">
+            <p class="bold-normal">Book a car now</p>
+            <br/><br/>
+
+            <input id="name-input" type="text" placeholder="Name">
+            <input id="email-input" type="text" placeholder="Email Address">
+            <input id="phone-number-input" type="number" placeholder="Phone Number">
+
+            <button id="book-button">+Book Now</button>
+
+        </div>
+
+    </div>
+
+    <div>
+        <p class="body-text">Our team will get in touch with you as soon as possible!</p>
+    </div>
+
+    <div id="about-section">
+
+        <div id="about-us">
+            <p class="bold-normal">About Us</p>
+            <br/><br/>
+            <p>Welcome to Book’n’Drive, your destination for hassle-free and reliable vehicle rentals. <br/>
+                At our company, we understand that it is not just about the destination, but also the journey there. <br/>
+                That’s why we are dedicated to helping you find the perfect car for your trip.</p>
+        </div>
+
+        <div id="our-mission">
+            <p class="bold-normal">Our Mission</p>
+            <br/><br/>
+            <p>at Book’n’Drive is to simplify your booking experience by offering a user-friendly platform for booking the right vehicle for your needs.</p>
+        </div>
+
+        <div id="why-choose-us">
+            <p class="bold-normal">Why Choose Us?</p>
+            <br/><br/>
+
+            <p>Extensive Fleet
+                <br/>
+                We have a growing collection for every specific need you might have.
+            </p>
+
+            <p>Seamless Booking
+                <br/>
+                We promise you one of the easiest booking processes you will encounter with a top-notch customer-centric approach.
+            </p>
+
+            <p>
+                Eco-Friendly Options
+                <br/>
+                With a growing concern on global warming and emissions caps, we offer you hybrid and electric options to make you comfortable as you make your memorable trips in our cars.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="bg-gray-300" id="body-images">
+        <!-- INPUT IMAGES USING TAILWIND CARDS OR SOMETHING. ABOUT 5 IMAGES -->
+        <div id="images-across">
+            <img class="w-3/6" src="./images/hondas.jpg" alt="">
+            <img class="w-3/6 h-auto"  src="./images/oldGarage.jpg" alt="">
+        </div>
+
+        <div class="img1">
+            <div id="images-vertical">
+                <img class="w-3/3" src="./images/stang.jpg" alt="">
+                <img class="w-3/3" src="./images/VWinterior.jpg" alt="">
+                <img class="w-3/3" src="./images/BMW.jpg" alt="">
+                <img class="w-3/3" src="./images/sunsetCar.jpg" alt="">
+            </div>
+            <img class="w-2/3" src="./images/greyTT.jpg" alt="">
+        </div>
+        
+    </div>
+
+    <div id="fleet-section">
+        <p class="body-text">Available selections</p>
+
+        <ul id="vehicle-list">
+
+        </ul>
+
+    </div>
+
+    <!-- Display booking information -->
+
+    <div id="booking-info">
+        <p class="body-text" style="font-weight: 400;" >Booking Information</p>
+        <!-- Just the car and booked status. Go fetch! -->
+        <ul id="booked-list">
+
+        </ul>
+    </div>
+
+    <div id="footer">
+        <div id="footer-left">
+            <p class="bold-normal">Book’n’Drive </p>
+            <br/><br/>
+            <p>Your #1 trusted partner in vehicle hire services.
+                <br/><br/>
+                Call : +254 712 123 123
+            </p>
+        </div>
+
+        <div id="footer-right">
+            <p class="bold-normal">Quick Links</p>
+            <br/><br/>
+            <p>
+                <a href="#book-section">Book Now</a>
+                <br/><br/>
+                <a href="#fleet-section">Our Fleet</a>
+            </p>
+        </div>
+    </div>
     
+    <script src="./script1.js"></script>
+
 </body>
 </html>

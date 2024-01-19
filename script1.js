@@ -1,11 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     const dataList = document.getElementById("vehicle-list");
-    const userName = document.getElementById( "name-input" ).value;
-    const userEmail = document.getElementById( "email-input" ).value;
-    const userPhone = document.getElementById( "phone-number-input" ).value;
+    const bookedList = document.getElementById( "booked-list" );
+    const bookedItem = document.createElement ( "li" );
 
-    // Replace the URL with your JSON server URL
-    
+    //To update info in text input
+    let variable1 = "";
+
+    function updateInfo ( data ) {
+        variable1 += data;
+        console.log ( `Updated ${variable1}` );
+    }
+    document.getElementById ( "book-button" ).addEventListener ( "click", function() {
+        userName = document.getElementById( "name-input" ).value;
+        userEmail = document.getElementById( "email-input" ).value;
+        userPhone = document.getElementById( "phone-number-input" ).value;
+
+        updateInfo ( userName );
+        updateInfo ( userEmail );
+        updateInfo ( userPhone );
+    });
 
     const apiUrl = "https://parallelum.com.br/fipe/api/v1/carros/marcas";
 
@@ -18,11 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(data => {
-            // data = JSON.parse(data); --Online response to "forEch is not a function" error
+            // data = JSON.parse(data); --Online response to "forEach is not a function" error
             // Process the data and update the list
-            console.log (data);
+            
 
             const first10Items = data.slice(0, 10);
+            console.log ( first10Items );
             first10Items.forEach(item => {
 
                     const listItem = document.createElement("li");
@@ -53,25 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
                         if ( item.status == "open"){
                             
                             //User input validation
-                            // if ( userEmail.textContent == "" || userPhone.textContent == "" ){
+                            // if ( userEmail == "" || userPhone == null ){
                             //     alert ( "Please enter your details above." )
                             // } else {
                                 item.status = "booked";
                                 alert (`Selected ${item.nome} - Status: ${item.status}`);
                             
-                        } else {
-                            alert ( "Sorry, that vehicle has been booked already. Please try another option." )
+                            }
+                        else {
+                            alert ( "Sorry, that vehicle has been booked already. Please try another option." );
                         }
 
                         //POST the selected vehicle data to JSON Server
                         const bookInfo = {
                             id : item.codigo,
                             brand : item.nome,
-                            status : item.status,
+                            vehicleStatus : item.status,
                             customerName : userName,
                             customerEmail : userEmail,
                             customerPhone : userPhone
                         }//RESUME WORK HERE!
+                        
 
                         fetch ( "http://localhost:3000/selected_cars", {
                             method : "POST",
@@ -82,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         })
                         .then ( response => response.text() )
                         .then ( data => console.log (data) )
-                        .catch ( error => console.error ( `Could not save data, ${error}` ) )
+                        .catch ( error => console.error ( "Could not save data: ",  error ) )
 
                     });
 
@@ -96,10 +112,36 @@ document.addEventListener("DOMContentLoaded", function () {
                     listItem.appendChild(selectButton);
 
                     dataList.appendChild(listItem);
+
                 
             });
         })
         .catch(error => {
             console.error("Error fetching data:", error);
         });
+
+        fetch ( "http://localhost:3000/selected_cars" )
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then ( data => {
+                console.log ( data );
+                
+                data.forEach ( item => {
+
+                    
+                    
+                    if ( item.vehicleStatus == "booked" ){
+
+                        bookedItem.textContent = `Vehicle ID: ${item.id}, ${item.brand} has been booked.`
+
+                    }
+                } )
+                
+            })
+            bookedList.appendChild( bookedItem )
+            
 });

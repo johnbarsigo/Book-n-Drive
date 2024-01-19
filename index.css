@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 200;
+}
+
+body {
+    width: 97vw;
+    margin: auto;
+}
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90vw;
+    height: 10vh;
+    margin: auto;
+    justify-content: space-between;
+    margin-right: 200px;
+
+}
+
+#navBar h1 {
+    text-align: center;
+    float: left;
+}
+
+#navLinks{
+    float: right;
+}
+
+
+#navLinks ul li {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    float: right;
+}
+
+#intro-img {
+    width: 98vw;
+    margin: auto;
+}
+
+.body-text {
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bold-normal {
+    font-weight: 400;
+}
+
+#book-section-div {
+    display: flex;
+    margin: 50px;
+}
+
+#need-a-car {
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+}
+
+#book-a-car {
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+}
+input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 431px;
+    height: 44px;
+    border: solid 2px;
+    border-color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#about-section {
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+#about-us {
+    text-align: center;
+    width: 30%;
+    align-self: center;
+}
+
+#our-mission {
+    text-align: center;
+    width: 30%;
+    align-self: center;
+}
+
+#why-choose-us {
+    text-align: center;
+    width: 30%;
+}
+
+#fleet-section {
+    width: 90vw;
+    height: 670px;
+    margin: auto;
+    background-color: rgb(238, 236, 236);
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer-left {
+    text-align: left;
+}
+#footer-right {
+    text-align: left;
+}
+
+li button {
+    width: 100px;
+    height: 45px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(185, 185, 185);
+    border: none;
+    border-radius: 15px;
+    float: right;
+    margin-right: 100px;
+    text-align: center;
+    align-self: center;
+}
+
+#book-button {
+    width: 431px;
+    height: 44px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+#booking-info {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    background-color: rgb(238, 236, 236);
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#body-images {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+}
+
+#images-across {
+    display: flex;
+}
+
+#images-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.img1 {
+    display: flex;
+}
