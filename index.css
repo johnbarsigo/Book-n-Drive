@@ -141,15 +141,19 @@ input {
 
 li button {
     width: 100px;
-    height: 45px;
+    height: 20px;
     color: rgb(0, 0, 0);
     background-color: rgb(185, 185, 185);
     border: none;
-    border-radius: 15px;
+    border-radius: 35px;
     float: right;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     text-align: center;
     align-self: center;
+    /* display: grid;
+    place-items: center; */
+    font-family: Inter;
+    font-size: 15px;
 }
 
 #book-button {
